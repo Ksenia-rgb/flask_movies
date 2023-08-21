@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Reviews</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+<body>
+    <div class="container">
+        {% include 'navigation.html' %}
+      <h1 class="mt-5 display-1"><a href="{{ url_for('index') }}" class="text-decoration-none">MovieReviews</a></h1>
+      <p class="lead">Пишите отзывы к фильмам!</p>
+      <hr>
+      <div class="row">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+    <footer id="footer" class="bg-light text-center py-3">
+      &copy; 2023 Movie Reviews. Все права защищены. Изображения на сайте сгенерированы нейросетью Kandinsky 2.1. Правообладатель ПАО СберБанк.
+    </footer>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+</html>
